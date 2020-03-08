@@ -6,11 +6,27 @@
     <meta name="viewport" content="width=device-width" />
     <title>Tax</title>
     <base href="/" />
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
     <app>Loading...</app>
     <script src="_framework/blazor.webassembly.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+        window.InitializeModals = () => {
+            var modals = document.querySelectorAll('.modal');
+            M.Modal.init(modals, {
+            });
+
+            var timepickers = document.querySelectorAll('.timepicker');
+            M.Timepicker.init(timepickers, {
+                twelveHour: false
+            });
+        }
+    </script>    
 </body>
 
 </html>
